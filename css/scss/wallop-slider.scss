@@ -1,16 +1,16 @@
 @import '_utils';
 
-.WallopSlider {
+.wallop-slider {
     width: 100%; // Recommended
 }
 
-.WallopSlider-list {
+.wallop-slider__list {
   list-style: none; // Recommended - to remove bullets
   position: relative; // Required
   overflow: hidden; // Required
 }
 
-.WallopSlider-item {
+.wallop-slider__item {
   display: none; // Required
   position: absolute; // Required
   top: 0; // Required
@@ -23,7 +23,7 @@
   }
 }
 
-.WallopSlider-item--current {
+.wallop-slider__item--current {
   display: block; // Required
   position: static; // Required
 }

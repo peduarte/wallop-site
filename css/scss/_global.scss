@@ -1,10 +1,10 @@
 * { margin: 0; padding: 0; } // dirty reset
 
 body {
-  font-family: Arial;
+  font-family: 'Voltaire', Arial;
   text-align: center;
-  background: #ffffff;
-  color: #2B2A30;
+  background: #2B2A30;
+  color: #ffffff;
   padding: 0 5%;
   font-size: 22px;
   line-height: 120%;
@@ -19,7 +19,7 @@ h1 {
 }
 
 a {
-  color: #2B2A30;
+  color: #ffffff;
 }
 
 section {
@@ -46,7 +46,7 @@ p {
 
 blockquote {
   margin: 2%;
-  background: darken(#ffffff, 5%);
+  background: darken(#2B2A30, 5%);
   padding: 20px;
   font-size: 18px;
 }
@@ -70,12 +70,15 @@ pre {
   max-width: 960px;
 }
 
-// Added here because this is not required
-.WallopSlider {
-  position: relative;
+.photo-slider {
   margin-bottom: 20px;
   display: inline-block;
   max-width: 612px;
+}
+
+// Added here because this is not required
+.wallop-slider {
+  position: relative
 }
 
 .small-slider {
@@ -87,8 +90,8 @@ pre {
 
 .btn {
   font-family: 'Voltaire', Arial;
-  background: #2B2A30;
-  color: #ffffff;
+  background: #ffffff;
+  color: #2B2A30;
   border: 2px solid #2B2A30;
   -webkit-appearance: none;
   font-size: 14px;
@@ -103,26 +106,32 @@ pre {
     position: absolute;
     z-index: 3;
     top: 50%;
-    opacity: .60;
+    opacity: 0;
     @include prefixr(transition, opacity 200ms ease);
 
+    .wallop-slider:hover & {
+      opacity: .75;
 
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 
   &:hover {
     cursor: pointer;
-
-    opacity: 1 !important;
   }
 
   &[disabled] {
     &,
     &:hover {
       cursor: default;
-      opacity: .2 !important;
     }
 
-
+    opacity: .4;
+    @include media-query(medium) {
+      visibility: hidden;
+    }
   }
 }
 
@@ -143,23 +152,3 @@ pre {
 }
 
 footer { padding-bottom: 30px; }
-
-
-
-
-.pagination {
-  margin: 20px 0;
-}
-
-.pagination-item {
-  display: inline-block;
-  height: 15px;
-  width: 15px;
-  margin: 4px;
-  border-radius: 15px;
-  background: #000;
-}
-
-.pagination-item--current {
-  background-color: tomato;
-}
