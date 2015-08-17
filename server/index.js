@@ -3,7 +3,7 @@ var cors = require('cors');
 var app = express();
 var fs = require('fs');
 var request = require('request');
-var cheerio = require('cheerio');
+var marked = require('marked');
 
 var PORT = process.env.PORT || 8080;
 var OUTPUT_PATH = 'client/src/data/';
@@ -13,9 +13,11 @@ app.use(cors());
 function scrapeReadme(ghUrl, callback) {
   request(ghUrl, function (error, response, html) {
     if (!error && response.statusCode == 200) {
-      var $ = cheerio.load(html);
+
+    	console.log('response -> ', response);
+
       var parsedResult = {
-      	html: $('#readme .entry-content').html()
+      	html: marked(response.body)
       };
 
       fs.writeFile(OUTPUT_PATH + 'readme.json', JSON.stringify(parsedResult, null, 4), function(err){

@@ -5,8 +5,7 @@
   "main": "client/src/app.js",
   "scripts": {
     "build": "webpack -p --config webpack.prod.config.js --profile --progress --colors",
-    "deploy-client": "npm run build && cp CNAME dist/ && ship dist -to gh-pages",
-    "deploy-server": "git push heroku develop:master",
+    "deploy-client": "npm run build && ship dist -to gh-pages",
     "dev": "node client/webpack-server.js",
     "server": "node server/index.js",
     "start": "node server/index.js"
@@ -33,6 +32,7 @@
     "css-loader": "^0.15.1",
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
+    "highlight.js": "^8.7.0",
     "html-loader": "^0.3.0",
     "json-loader": "^0.5.2",
     "node-libs-browser": "^0.5.2",
@@ -45,9 +45,9 @@
   },
   "dependencies": {
     "react": "^0.13.3",
-    "cheerio": "^0.19.0",
     "cors": "^2.7.1",
     "express": "^4.13.1",
-    "request": "^2.60.0"
+    "request": "^2.60.0",
+    "marked": "^0.3.5"
   }
 }
