@@ -2,7 +2,7 @@ Not much to see here ¯\\_(ツ)_/¯
 
 This is the repo for the Wallop's documentation website.
 
-If you're after Wallop Slider's documentation, check out **[Wallop.js repo](https://github.com/WallopSlider/Wallop.js)**
+If you're after Wallop Slider's documentation, check out **[Wallop.js repo](https://github.com/peduarte/wallop)**
 
 ## About the site
 This site is built with webpack and react.<br>
@@ -22,7 +22,7 @@ Server available on: **http://localhost:8080**<br>
 
 ### API
 - `mdUrl` – This will create a file called `readme.json` in `/clients/data/`
-Example: `http://localhost:8080/api/mdUrl=?https://raw.githubusercontent.com/WallopSlider/Wallop.js/master/README.md`
+Example: `http://localhost:8080/api/mdUrl=?https://raw.githubusercontent.com/peduarte/wallop/master/README.md`
 > **Note** you will need to run this with a valid mdUrl to create the readme.json
 
 ## Run client
