@@ -10,12 +10,9 @@ var OUTPUT_PATH = 'client/src/data/';
 
 app.use(cors());
 
-function scrapeReadme(ghUrl, callback) {
-  request(ghUrl, function (error, response, html) {
+function scrapeReadme(mdUrl, callback) {
+  request(mdUrl, function (error, response, html) {
     if (!error && response.statusCode == 200) {
-
-    	console.log('response -> ', response);
-
       var parsedResult = {
       	html: marked(response.body)
       };
@@ -33,9 +30,8 @@ app.get('/', function(req, res) {
 });
 
 app.get('/api/readme', function(req, res) {
-	console.log('req.query.ghUrl -> ', req.query.ghUrl);
-  if (req.query.ghUrl) {
-    scrapeReadme(req.query.ghUrl, function(data) {
+  if (req.query.mdUrl) {
+    scrapeReadme(req.query.mdUrl, function(data) {
     	console.log('File successfully written!');
       res.send('File successfully written!')
     });
