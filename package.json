@@ -7,7 +7,7 @@
     "build": "webpack -p --config webpack.prod.config.js --profile --progress --colors",
     "deploy": "npm run build && ship dist -to gh-pages",
     "dev": "node client/webpack-server.js",
-    "server": "node server/index.js"
+    "server": "node server/index.js --url=https://raw.githubusercontent.com/peduarte/wallop/master/README.md"
   },
   "repository": {
     "type": "git",
@@ -41,7 +41,8 @@
     "url-loader": "^0.5.6",
     "wallop": "^2.1.1",
     "webpack": "^1.10.1",
-    "webpack-dev-server": "^1.10.1"
+    "webpack-dev-server": "^1.10.1",
+    "yargs": "^3.19.0"
   },
   "dependencies": {
     "react": "^0.13.3",
