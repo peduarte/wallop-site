@@ -5,10 +5,9 @@
   "main": "client/src/app.js",
   "scripts": {
     "build": "webpack -p --config webpack.prod.config.js --profile --progress --colors",
-    "deploy-client": "npm run build && ship dist -to gh-pages",
+    "deploy": "npm run build && ship dist -to gh-pages",
     "dev": "node client/webpack-server.js",
     "server": "node server/index.js",
-    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
