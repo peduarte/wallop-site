@@ -24,7 +24,7 @@ Example: `http://localhost:8080/api/ghUrl=?https://github.com/WallopSlider/Wallo
 
 ## Run client
 ```
-npm run client
+npm run dev
 ```
 Client available on: **http://localhost:3000**<br>
 
