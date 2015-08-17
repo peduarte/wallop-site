@@ -7,7 +7,7 @@
     "build": "webpack -p --config webpack.prod.config.js --profile --progress --colors",
     "deploy": "npm run build && ship dist -to gh-pages",
     "dev": "node client/webpack-server.js",
-    "mdhtmljson": "./node_modules/.bin/mdhtmljson --url=https://raw.githubusercontent.com/peduarte/wallop/master/README.md --./client/src/data/readme.json"
+    "mdhtmljson": "./node_modules/.bin/mdhtmljson --url=https://raw.githubusercontent.com/peduarte/wallop/master/README.md --output=./client/src/data/readme.json"
   },
   "repository": {
     "type": "git",
@@ -34,7 +34,7 @@
     "highlight.js": "^8.7.0",
     "html-loader": "^0.3.0",
     "json-loader": "^0.5.2",
-    "mdhtmljson": "^1.0.2",
+    "mdhtmljson": "^1.0.3",
     "node-libs-browser": "^0.5.2",
     "react-hot-loader": "^1.2.7",
     "ship": "^0.2.4",
