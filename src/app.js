@@ -2,15 +2,21 @@ import './styles/styles.css';
 
 import React from 'react';
 
-import Readme from './components/readme/readme.js';
-import Demo from './components/demo/demo.js';
+import Readme from './components/readme/';
+import Demo from './components/demo';
+import Infobar from './components/info-bar';
+import More from './components/more';
+import Footer from './components/footer';
 
-import data from './data/readme.json';
+import docs from './data/readme.json';
 
 React.render(
 	<div>
+    <Infobar />
 		<Demo />
-  	<Readme data={data}/>
+  	<Readme data={docs} />
+    <More />
+    <Footer />
   </div>,
-  document.getElementById('app')
+  document.body
 );

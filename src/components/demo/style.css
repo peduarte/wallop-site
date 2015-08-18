@@ -1,0 +1,124 @@
+@import '../../../node_modules/wallop/css/wallop.css';
+@import '../../styles/gh.css';
+
+.Demo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hljs {
+  font-family: 'Source Code Pro', serif;
+  font-size: 0.83em;
+  font-weight: 400;
+}
+
+blockquote {
+  border-left: 5px solid #eee;
+  padding-left: 15px;
+}
+
+code {
+	background: #f8f8f8;
+	padding: 3px;
+}
+
+
+.Wallop-item {
+  box-sizing: border-box;
+  padding: 40px;
+  height: 320px;
+}
+
+.Wallop-item:nth-child(1) { background-color: #8DCCB4; }
+.Wallop-item:nth-child(2) { background-color: #E85239; }
+.Wallop-item:nth-child(3) { background-color: #C65C8E; }
+.Wallop-item:nth-child(4) { background-color: #FBE178; }
+.Wallop-item:nth-child(5) { background-color: #D6F3E0; }
+
+
+.Wallop-item--current {
+  opacity: 0;
+  transform: translateZ(0);
+  animation: show 800ms ease-out forwards;
+}
+
+.Wallop-item--hide-previous,
+.Wallop-item--hide-next {
+  display: block;
+  transform: translateZ(0);
+  animation: hide 800ms ease-out forwards;
+}
+
+.Wallop-item img {
+  max-height: 100%;
+  width: auto;
+  margin: 0 auto;
+}
+
+.Wallop-item--current img {
+  animation: show 400ms 400ms ease-out forwards;
+}
+
+.Wallop-item--show-previous img,
+.Wallop-item--show-next img {
+  opacity: 0;
+  animation: show 400ms 400ms ease-out forwards;
+}
+
+.Wallop-item--hide-previous img,
+.Wallop-item--hide-next img {
+  animation: hide 400ms ease-out forwards;
+}
+
+@keyframes hide {
+  to { opacity: 0; }
+}
+
+@keyframes show {
+  to { opacity: 1; }
+}
+
+
+.Wallop-buttonPrevious,
+.Wallop-buttonNext {
+  border: none;
+  webkit-appearance: none;
+  background: rgba(255, 255, 255, .6);
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-indent: -9999px;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Wallop-buttonPrevious:hover,
+.Wallop-buttonNext:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 255, .85);
+}
+
+.Wallop-buttonPrevious:focus,
+.Wallop-buttonNext:focus {
+  outline: 0;
+}
+
+.Wallop-buttonPrevious:before,
+.Wallop-buttonNext:before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-indent: 0;
+  font-size: 25px;
+  line-height: 0;
+}
+
+.Wallop-buttonPrevious { left: 16px; }
+.Wallop-buttonPrevious:before { content: "\276E"; }
+
+.Wallop-buttonNext { right: 16px; }
+.Wallop-buttonNext:before { content: "\276F"; }

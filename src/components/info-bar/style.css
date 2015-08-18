@@ -1,0 +1,25 @@
+.Infobar {
+  padding: 20px 12px;
+  border-bottom: solid 1px #CFD8DC;
+}
+
+footer .Infobar {
+  margin-top: calc(1.414em * 4);
+  border-bottom: 0;
+  border-top: solid 1px #CFD8DC;
+}
+
+.Infobar a {
+  border-bottom: 0;
+}
+
+.Infobar .link {
+  vertical-align: middle;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.Infobar .madeby {
+  float: right;
+  display: inline-block;
+}

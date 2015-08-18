@@ -1,4 +1,4 @@
-import './demo.css';
+import './style.css';
 
 import React from 'react';
 
@@ -31,7 +31,6 @@ export default React.createClass({
           <button className="Wallop-buttonPrevious">Previous</button>
           <button className="Wallop-buttonNext">Next</button>
         </div>
-        <p>Images courtesy of <a href="https://dribbble.com/TonyBabel">TonyBabel</a></p>
       </div>
     )
   }
