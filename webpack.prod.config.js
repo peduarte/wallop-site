@@ -4,9 +4,11 @@ var webpack = require('webpack');
 config.devtool = 'source-map';
 
 config.entry = [
-  './client/src/app',
-  './client/src/index.html'
+  './src/app',
+  './src/index.html'
 ];
+
+output.publicPath = './',
 
 config.plugins.push(
   new webpack.DefinePlugin({

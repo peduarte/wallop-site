@@ -18,7 +18,7 @@ npm install
 ```
 npm run dev
 ```
-Client available on: **http://localhost:3000**<br>
+Client available on: **http://localhost:8080**<br>
 
 ## Updating docs
 ```
@@ -26,7 +26,7 @@ npm run mdhtmljson
 ```
 
 ## Deploying
-I am using [ship](https://www.npmjs.com/package/ship) to deploy the build to Github Pages. But because I want the URL to be peduarte.github.io**/wallop** rather than **/wallop-site** (and I don't want to buy a custom domain for it), I deploy the build to the gh-pages branch of the [wallop repo](https://github.com/peduarte/wallop/tree/gh-pages). Refer to `ship.example.conf` to see the configuration. 
+I am using [ship](https://www.npmjs.com/package/ship) to deploy the build to Github Pages. But because I want the URL to be peduarte.github.io**/wallop** rather than **/wallop-site** (and I don't want to buy a custom domain for it), I deploy the build to the gh-pages branch of the [wallop repo](https://github.com/peduarte/wallop/tree/gh-pages). Refer to `ship.example.conf` to see the configuration.
 
 
 
