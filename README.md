@@ -2,7 +2,7 @@ Not much to see here ¯\\_(ツ)_/¯
 
 This is the repo for the Wallop's documentation website.
 
-If you're after Wallop Slider's documentation, check out **[wallop repo](https://github.com/peduarte/wallop)**
+If you're after wallop's documentation, check out **[wallop repo](https://github.com/peduarte/wallop)**
 
 ## About the site
 This site is built with webpack and react.<br>
