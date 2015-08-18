@@ -8,7 +8,7 @@ config.entry = [
   './src/index.html'
 ];
 
-output.publicPath = './',
+config.output.publicPath = './',
 
 config.plugins.push(
   new webpack.DefinePlugin({
