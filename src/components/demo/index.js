@@ -4,6 +4,7 @@ import React from 'react';
 
 import Wallop from 'Wallop';
 import hljs from 'highlight.js';
+import classie from 'classie';
 
 import img1 from '../../images/raptorcat.gif';
 import img2 from '../../images/sloppyswimmer.gif';
@@ -12,11 +13,29 @@ import img4 from '../../images/sportyslob.gif';
 import img5 from '../../images/fuzzy3.gif';
 
 var wallop;
+var itemIndexStore;
 
 export default React.createClass({
   componentDidMount() {
     wallop = new Wallop(document.querySelector('.Wallop'));
-  hljs.initHighlightingOnLoad();
+    hljs.initHighlightingOnLoad();
+
+    wallop.on('change', function(event) {
+      classie.remove(document.body, 'is-currentItem--' + itemIndexStore);
+      itemIndexStore = event.detail.currentItemIndex;
+      classie.add(document.body, 'is-currentItem--' + event.detail.currentItemIndex);
+    });
+
+    window.onkeyup = function(e) {
+      switch (e.keyCode) {
+        case 37:
+          wallop.previous();
+          break;
+        case 39:
+          wallop.next();
+          break;
+      }
+    };
   },
 
   render() {

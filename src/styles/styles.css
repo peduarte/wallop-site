@@ -49,6 +49,12 @@ a {
   color: #000;
 }
 
+.is-currentItem--0 a { color: #8DCCB4; }
+.is-currentItem--1 a { color: #E85239; }
+.is-currentItem--2 a { color: #C65C8E; }
+.is-currentItem--3 a { color: #B9A451; }
+.is-currentItem--4 a { color: #7CBF93; }
+
 .brand {
   display: block;
   background-repeat: no-repeat;
