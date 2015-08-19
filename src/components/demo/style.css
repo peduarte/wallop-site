@@ -124,3 +124,34 @@ code {
 
 .Wallop-buttonNext { right: 16px; }
 .Wallop-buttonNext:before { content: "\276F"; }
+
+
+.Demo-tip {
+  opacity: 0;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  background: #f5f4ff;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  margin-left: -100px;
+  transform: translateZ(0);
+}
+
+.Wallop-item--current .Demo-tip {
+  animation: showTip 200ms 600ms ease-out forwards;
+}
+
+@keyframes showTip {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -46,7 +46,8 @@ body {
 
 a {
   text-decoration: none;
-  color: #000;
+  color: #8DCCB4;
+  transition: color 300ms ease-out;
 }
 
 .is-currentItem--0 a { color: #8DCCB4; }

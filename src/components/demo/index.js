@@ -42,9 +42,9 @@ export default React.createClass({
     return (
       <div className="Demo">
         <div className="Wallop">
-          <div className="Wallop-item Wallop-item--current"><img src={img1}/></div>
+          <div className="Wallop-item"><img src={img1}/></div>
           <div className="Wallop-item"><img src={img2}/></div>
-          <div className="Wallop-item"><img src={img3}/></div>
+          <div className="Wallop-item Wallop-item--current"><img src={img3}/><div className="Demo-tip">#protip: try using your keyboard arrows</div></div>
           <div className="Wallop-item"><img src={img4}/></div>
           <div className="Wallop-item"><img src={img5}/></div>
           <button className="Wallop-buttonPrevious">Previous</button>
