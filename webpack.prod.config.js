@@ -3,6 +3,15 @@ var webpack = require('webpack');
 
 config.devtool = 'source-map';
 
+config.cssnext = {
+  browsers: "last 2 versions",
+  compress: false
+},
+
+config.cssloader = {
+  aggressiveMerging: false
+},
+
 config.entry = [
   './src/app',
   './src/index.html'
