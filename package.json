@@ -1,5 +1,5 @@
 {
-  "name": "wallopslider-site",
+  "name": "wallop-site",
   "version": "1.0.0",
   "description": "Website for wallop",
   "main": "client/src/app.js",
@@ -7,11 +7,12 @@
     "build": "webpack -p --config webpack.prod.config.js --profile --progress --colors",
     "deploy": "npm run build && ship dist -to gh-pages",
     "dev": "webpack-dev-server --config webpack.config.js --profile --progress --colors",
+    "start": "npm run dev",
     "mdhtmljson": "mdhtmljson https://raw.githubusercontent.com/peduarte/wallop/master/README.md -o ./src/data/readme.json"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WallopSlider/wallopslider.github.io.git"
+    "url": "git+https://github.com/peduarte/wallop-site.git"
   },
   "author": {
     "name": "Pedro Duarte",
@@ -20,14 +21,13 @@
   },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WallopSlider/wallopslider.github.io/issues"
+    "url": "https://github.com/peduarte/wallop-site/issues"
   },
-  "homepage": "https://github.com/WallopSlider/wallopslider.github.io/#readme",
+  "homepage": "https://github.com/peduarte/wallop-site/#readme",
   "private": true,
   "devDependencies": {
     "babel-core": "^5.6.15",
     "babel-loader": "^5.1.4",
-    "browser-request": "^0.3.3",
     "classie": "^1.0.0",
     "css-loader": "^0.15.1",
     "cssnext-loader": "^1.0.1",
@@ -41,16 +41,11 @@
     "ship": "^0.2.4",
     "style-loader": "^0.12.3",
     "url-loader": "^0.5.6",
-    "wallop": "^2.1.2",
+    "wallop": "^2.1.3",
     "webpack": "^1.10.1",
-    "webpack-dev-server": "^1.10.1",
-    "yargs": "^3.19.0"
+    "webpack-dev-server": "^1.10.1"
   },
   "dependencies": {
-    "react": "^0.13.3",
-    "cors": "^2.7.1",
-    "express": "^4.13.1",
-    "request": "^2.60.0",
-    "marked": "^0.3.5"
+    "react": "^0.13.3"
   }
 }

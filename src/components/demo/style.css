@@ -29,6 +29,14 @@ code {
   height: 320px;
 }
 
+@media (min-width: 630px) {
+  .Wallop-item {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    height: 480px;
+  }
+}
+
 .Wallop-item:nth-child(1) { background-color: #8DCCB4; }
 .Wallop-item:nth-child(2) { background-color: #E85239; }
 .Wallop-item:nth-child(3) { background-color: #C65C8E; }
@@ -42,9 +50,9 @@ code {
   animation: show 800ms ease-out forwards;
 }
 
-.Wallop-item--hide-previous,
-.Wallop-item--hide-next {
-  display: block;
+.Wallop-item--hidePrevious,
+.Wallop-item--hideNext {
+  visibility: visible;
   transform: translateZ(0);
   animation: hide 800ms ease-out forwards;
 }
@@ -53,20 +61,22 @@ code {
   max-height: 100%;
   width: auto;
   margin: 0 auto;
+  opacity: 0;
 }
 
 .Wallop-item--current img {
   animation: show 400ms 400ms ease-out forwards;
 }
 
-.Wallop-item--show-previous img,
-.Wallop-item--show-next img {
+.Wallop-item--showPrevious img,
+.Wallop-item--showNext img {
   opacity: 0;
+  transform: translateZ(0);
   animation: show 400ms 400ms ease-out forwards;
 }
 
-.Wallop-item--hide-previous img,
-.Wallop-item--hide-next img {
+.Wallop-item--hidePrevious img,
+.Wallop-item--hideNext img {
   animation: hide 400ms ease-out forwards;
 }
 
