@@ -47,6 +47,7 @@ export default React.createClass({
           <div className="Wallop-item"><img src={img3}/><div className="Demo-tip">#protip: try using your keyboard arrows</div></div>
           <div className="Wallop-item"><img src={img4}/></div>
           <div className="Wallop-item"><img src={img5}/></div>
+          <div className="Wallop-item Wallop-thanks"><p>Thank you for looking & thank you <a href="https://dribbble.com/TonyBabel">TonyBabel</a> for the beautiful gifs</p></div>
           <button className="Wallop-buttonPrevious">Previous</button>
           <button className="Wallop-buttonNext">Next</button>
         </div>

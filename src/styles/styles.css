@@ -2,6 +2,9 @@
 @import url(http://d2v52k3cl9vedd.cloudfront.net/basscss/7.0.3/basscss.min.css);
 @import url(http://fonts.googleapis.com/css?family=Source+Code+Pro:400);
 
+* {
+  box-sizing: border-box;
+}
 
 html {
   font-size: 1em;
@@ -12,7 +15,11 @@ body {
   font-weight: 300;
   line-height: 1.45;
   color: #333;
+
+  transition: background-color 400ms ease-out;
 }
+
+.is-currentItem--5 { background-color: #FFE600; }
 
 p {margin-bottom: 1.3em;}
 
@@ -55,6 +62,7 @@ a {
 .is-currentItem--2 a { color: #C65C8E; }
 .is-currentItem--3 a { color: #B9A451; }
 .is-currentItem--4 a { color: #7CBF93; }
+.is-currentItem--5 a { color: #000; }
 
 .brand {
   display: block;

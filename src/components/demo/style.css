@@ -24,16 +24,17 @@ code {
 
 
 .Wallop-item {
-  box-sizing: border-box;
   padding: 40px;
-  height: 320px;
+  height: 180px;
+  max-height: 300px;
 }
 
-@media (min-width: 630px) {
+@media (min-width: 580px) {
   .Wallop-item {
     padding-top: 80px;
     padding-bottom: 80px;
     height: 480px;
+    max-height: 480px;
   }
 }
 
@@ -80,17 +81,56 @@ code {
   animation: hide 400ms ease-out forwards;
 }
 
-@keyframes hide {
-  from { opacity: 1; }
-  to { opacity: 0; }
+.Wallop-thanks {
+  overflow: hidden;
 }
 
-@keyframes show {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.Wallop-thanks p {
+  font-size: 16px;
+  color: #fff;
+  max-width: 880px;
+  padding: 0 60px;
+  margin: 0 auto;
+  font-weight: bold;
+
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 100%;
+}
+
+@media (min-width: 580px) {
+  .Wallop-thanks p {
+    font-size: 44px;
+  }
+}
+
+.Wallop-item--current p {
+  animation: showThanks 4000ms 600ms linear forwards;
+}
+
+.Demo-tip {
+  opacity: 0;
+  box-sizing: border-box;
+  width: 200px;
+  padding: 20px;
+  border-radius: 4px;
+  background: #f5f4ff;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  margin-left: -100px;
+  transform: translateZ(0);
+}
+
+@media (min-width: 580px) {
+  .Wallop-item--current .Demo-tip {
+    animation: showTip 200ms 600ms ease-out forwards;
+  }
 }
 
 
+/* Pagination */
 .Wallop-buttonPrevious,
 .Wallop-buttonNext {
   border: none;
@@ -135,23 +175,15 @@ code {
 .Wallop-buttonNext { right: 16px; }
 .Wallop-buttonNext:before { content: "\276F"; }
 
-
-.Demo-tip {
-  opacity: 0;
-  box-sizing: border-box;
-  width: 200px;
-  padding: 20px;
-  border-radius: 4px;
-  background: #f5f4ff;
-  position: absolute;
-  left: 50%;
-  top: 20px;
-  margin-left: -100px;
-  transform: translateZ(0);
+/* Animations */
+@keyframes hide {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
-.Wallop-item--current .Demo-tip {
-  animation: showTip 200ms 600ms ease-out forwards;
+@keyframes show {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 
 @keyframes showTip {
@@ -163,5 +195,17 @@ code {
   100% {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+@keyframes showThanks {
+  0% {
+    top: 100%;
+    transform: translate3d(-50%, 0, 0);
+  }
+
+  100% {
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0);
   }
 }
