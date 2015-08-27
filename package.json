@@ -4,11 +4,12 @@
   "description": "Website for wallop",
   "main": "client/src/app.js",
   "scripts": {
-    "build": "webpack -p --config webpack.prod.config.js --profile --progress --colors",
+    "build": "webpack -p --config webpack.prod.config.js --profile --progress --colors && npm run copy-static-files",
     "deploy": "npm run build && ship dist -to gh-pages",
     "dev": "webpack-dev-server --config webpack.config.js --profile --progress --colors",
     "start": "npm run dev",
-    "mdhtmljson": "mdhtmljson https://raw.githubusercontent.com/peduarte/wallop/master/README.md -o ./src/data/readme.json"
+    "mdhtmljson": "mdhtmljson https://raw.githubusercontent.com/peduarte/wallop/master/README.md -o ./src/data/readme.json",
+    "copy-static-files": "cp src/images/static/* dist/"
   },
   "repository": {
     "type": "git",
