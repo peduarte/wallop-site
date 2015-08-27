@@ -15,6 +15,9 @@ export default React.createClass({
           <h3>More</h3>
           <p>Please check the <a href={readmeUrl}>README</a> for more information on the API, contributing and license.</p>
           <p>Images courtesy of <a href="https://dribbble.com/TonyBabel">TonyBabel</a></p>
+          <p><a href="https://twitter.com/share" className="twitter-share-button" data-via="peduarte">Tweet</a></p>
+          <h3>CI Status</h3>
+          <img src="https://travis-ci.org/peduarte/wallop.svg?branch=master" />
         </div>
       </div>
     )
