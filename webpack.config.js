@@ -4,13 +4,11 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
 
-  // http://webpack.github.io/docs/configuration.html#devtool
   devtool: 'eval',
 
-  // http://gaearon.github.io/react-hot-loader/getstarted/
   entry: [
     './src/app',
-    './src/index.html',
+    './src/index.html'
   ],
 
   output: {
@@ -20,12 +18,11 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('styles.css'), // extracts css
-    new webpack.HotModuleReplacementPlugin(), // hot-mode
-    new webpack.NoErrorsPlugin() // https://github.com/webpack/docs/wiki/list-of-plugins#noerrorsplugin
+    new ExtractTextPlugin('styles.css'),
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NoErrorsPlugin()
   ],
 
-  // resolve paths: http://webpack.github.io/docs/resolving.html
   resolve: {
     extensions: ['', '.js']
   },
